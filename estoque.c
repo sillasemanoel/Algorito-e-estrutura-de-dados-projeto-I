@@ -5,7 +5,7 @@
 
 void ordenarItensEstoque(ItemEstoque *estoque) {
     if (estoque == NULL || estoque->prox == NULL) {
-        printf("Estoque vazio ou com apenas um item. Nada a ordenar.\n");
+        printf("Estoque vazio ou com apenas um item. Nada a apresentar.\n");
         return;
     }
 
@@ -21,7 +21,7 @@ void ordenarItensEstoque(ItemEstoque *estoque) {
             if (strcmp(ptr->nome, ptr->prox->nome) > 0) {
                 ItemEstoque *temp = (ItemEstoque *)malloc(sizeof(ItemEstoque));
                 if (temp == NULL) {
-                    printf("Erro ao alocar memória para ordenação do estoque.\n");
+                    printf("Erro ao alocar memória para ordenar estoque.\n");
                     return;
                 }
                 strcpy(temp->nome, ptr->nome);
@@ -131,5 +131,5 @@ void imprimirEstoqueArquivo(ItemEstoque *estoque) {
     }
 
     fclose(arquivo);
-    printf("Estoque impresso e salvo com sucesso no arquivo 'estoque.txt'.\n");
+    printf("Estoque exibido e salvo com sucesso no arquivo 'estoque.txt'.\n");
 }

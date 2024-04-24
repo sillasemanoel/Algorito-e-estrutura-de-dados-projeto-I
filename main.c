@@ -246,7 +246,7 @@ int main()
         }
         else
         {
-            printf("Email ou senha incorretos. Tente novamente.\n");
+            printf("Email ou senha incorretos, tente novamente!\n");
         }
     }
 
